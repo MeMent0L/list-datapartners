@@ -14,12 +14,12 @@
 
 ## 🦑 Policies
 
-**[Here](policies/README.md)** are the policies & processes by which accounts or assets may aquire positive labels such as `Pledged`.
+**[Here](policies/README.md)** are the policies & processes by which accounts get labels like `Pledged' and attach to online accounts.
 
 
 ## 🤿 List Files & Schema
 
-The file list-accounts-pledged.json has accounts with `Pledged` label. It follows this schema.
+The file [list-accounts-pledged.json](list-accounts-pledged.json) has accounts with `Pledged` label. It follows this schema.
 
 ```json
 {
@@ -28,7 +28,7 @@ The file list-accounts-pledged.json has accounts with `Pledged` label. It follow
 }, ...
 ```
 
-The file list-accounts-data-launch-partner.json has accounts with `Data Launch Partner` label. It follows this schema.
+The file [list-accounts-data-launch-partner.json](list-accounts-data-launch-partner.json) has accounts with `Data Launch Partner` label. It follows this schema.
 
 ```json
 {
@@ -41,7 +41,7 @@ The file list-accounts-data-launch-partner.json has accounts with `Data Launch P
 }, ...
 ```
 
-The file list-accounts-publicly-traded.json has accounts with `Publicly Traded` label. It follows this schema.
+The file [list-accounts-publicly-traded.json](list-accounts-publicly-traded.json) has accounts with `Publicly Traded` label. It follows this schema.
 
 ```json
 {
@@ -50,7 +50,7 @@ The file list-accounts-publicly-traded.json has accounts with `Publicly Traded` 
 }, ...
 ```
 
-The file list-accounts-email.json has accounts with authenticated email address. It follows this schema.
+The file [list-accounts-email.json](list-accounts-email.json) has accounts with authenticated email address. It follows this schema.
 
 ```json
 {
@@ -59,7 +59,7 @@ The file list-accounts-email.json has accounts with authenticated email address.
 }, ...
 ```
 
-The file list-accounts-twitter.json has accounts with authenticated Twitter handle. It follows this schema.
+The file [list-accounts-twitter.json](list-accounts-twitter.json) has accounts with authenticated Twitter handle. It follows this schema.
 
 ```json
 {
@@ -74,14 +74,14 @@ The file list-accounts-twitter.json has accounts with authenticated Twitter hand
 npm i @oceanprotocol/list-datapartners
 ```
 
-This list is published as a npm module and the [`market`](https://github.com/oceanprotocol/market) uses it as a dependency to enhance the UI for those data partners.
+These lists are published as a npm module and the [`market`](https://github.com/oceanprotocol/market) uses it as a dependency to enhance the UI for those data partners.
 
 After every change, a new version of the list needs to be released.
 
 You can also directly fetch the list from the `main` branch:
 
 ```text
-https://raw.githubusercontent.com/oceanprotocol/list-datapartners/main/list-datapartners.json
+https://raw.githubusercontent.com/oceanprotocol/list-datapartners/main/list-accounts-data-launch-partner.json
 ```
 
 JavaScript usage:
@@ -96,8 +96,8 @@ const listPartners = require('@oceanprotocol/list-datapartners')
 TypeScript usage:
 
 ```ts
-import listPartners from '@oceanprotocol/list-datapartners'
-import { PartnerData } from '@oceanprotocol/list-datapartners/types'
+import listPartners from '@oceanprotocol/list-accounts-data-launch-partner'
+import { PartnerData } from '@oceanprotocol/list-accounts-data-launch-partner/types'
 ```
 
 ## ⬆️ Releases
