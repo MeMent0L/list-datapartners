@@ -1,16 +1,11 @@
 [![banner](https://raw.githubusercontent.com/oceanprotocol/art/master/github/repo-banner%402x.png)](https://oceanprotocol.com)
 
-<h1 align="center" title="list-datapartners">
-   <img width="300" src="https://user-images.githubusercontent.com/90316/98151631-c14cd180-1ed0-11eb-91f8-f8fd73f92b29.png" /><br />
-</h1>
-
-> Ocean Protocol's Data Partners list
-
-https://blog.oceanprotocol.com/announcing-ocean-market-data-launch-partners-3b531601e63a
+> Ocean Market Positive-Label Lists
 
 ---
 
-- [🦑 How to become a data partner](#-how-to-become-a-data-partner)
+- [🦑 Policies](#-policies)
+- [🐬 List Files](#-list-files)
 - [🤿 List Schema](#-list-schema)
 - [🏄‍♀️ List Usage](#️-list-usage)
 - [⬆️ Releases](#️-releases)
@@ -18,26 +13,49 @@ https://blog.oceanprotocol.com/announcing-ocean-market-data-launch-partners-3b53
 
 ---
 
-## 🦑 How to become a data partner
+## 🦑 Policies
 
-_outline process_
+**[Here](policies/README.md)** are the policies & processes by which accounts or assets may aquire positive labels such as `Pledged`.
+
+## 🐬 List Files
+
+There is one json file for each list:
+- list-accounts-pledged.json - accounts with `Pledged` label
+- list-accounts-data-launch-partner.json - accounts with `Data Launch Partner` label
+- list-accounts-publicly-traded.json - accounts with `Publicly Traded' label
+
+There are also lists that link the account with other online identities. 
+- list-accounts-email.json - accounts with authenticated email address
+- list-accounts-twitter.json - accounts with authenticated Twitter handle
 
 ## 🤿 List Schema
 
-For each partner:
+All account lists follow this schema. (FIXME this can be simplified)
 
 ```json
 {
-  "name": "Partner Company Name",
-  "accounts": ["0x00000000000000000000"],
-  "links": {
-    "Home": "https://website.com",
-    "Twitter": "https://twitter.com/@HANDLE"
-  }
+  "address": "0x.....",
+  "name": "Individual or Organization Name",
 },
 {
    ...
 }
+```
+
+For the list of authenticated email addresses:
+```json
+{
+  "address": "0x.....",
+  "email": "foo@bar.com",
+}, ...
+```
+
+For the list of authenticated Twitter accounts:
+```json
+{
+  "address": "0x.....",
+  "email": "https://twitter.com/foobar",
+}, ...
 ```
 
 ## 🏄‍♀️ List Usage
