@@ -5,7 +5,7 @@
 ---
 
 - [🦑 Policies](#-policies)
-- [🤿 List Files & Schema](#-list-schema)
+- [🤿 List Schema](#-list-schema)
 - [🏄‍♀️ List Usage](#️-list-usage)
 - [⬆️ Releases](#️-releases)
 - [🏛 License](#-license)
@@ -17,7 +17,7 @@
 **[Here](policies/README.md)** are the policies & processes by which accounts get labels like `Pledged' and attach to online accounts.
 
 
-## 🤿 List Files & Schema
+## 🤿 List Schema
 
 The file [list-accounts-pledged.json](list-accounts-pledged.json) has accounts with `Pledged` label. It follows this schema.
 
