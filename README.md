@@ -5,8 +5,7 @@
 ---
 
 - [🦑 Policies](#-policies)
-- [🐬 List Files](#-list-files)
-- [🤿 List Schema](#-list-schema)
+- [🤿 List Files & Schema](#-list-schema)
 - [🏄‍♀️ List Usage](#️-list-usage)
 - [⬆️ Releases](#️-releases)
 - [🏛 License](#-license)
@@ -17,32 +16,42 @@
 
 **[Here](policies/README.md)** are the policies & processes by which accounts or assets may aquire positive labels such as `Pledged`.
 
-## 🐬 List Files
 
-There is one json file for each list:
-- list-accounts-pledged.json - accounts with `Pledged` label
-- list-accounts-data-launch-partner.json - accounts with `Data Launch Partner` label
-- list-accounts-publicly-traded.json - accounts with `Publicly Traded' label
+## 🤿 List Files & Schema
 
-There are also lists that link the account with other online identities. 
-- list-accounts-email.json - accounts with authenticated email address
-- list-accounts-twitter.json - accounts with authenticated Twitter handle
+The file list-accounts-pledged.json has accounts with `Pledged` label. It follows this schema.
 
-## 🤿 List Schema
+```json
+{
+  "address": "0x.....",
+  "pledge": "Text of pledge",
+}, ...
+```
 
-All account lists follow this schema. (FIXME this can be simplified)
+The file list-accounts-data-launch-partner.json has accounts with `Data Launch Partner` label. It follows this schema.
+
+```json
+{
+    "accounts": ["0xf00ba4"],
+    "name": "Foo Bar Inc.",
+    "links": {
+      "Home": "https://www.foobar.com/",
+      "Twitter": "https://twitter.com/FooBar"
+    }
+}, ...
+```
+
+The file list-accounts-publicly-traded.json has accounts with `Publicly Traded` label. It follows this schema.
 
 ```json
 {
   "address": "0x.....",
   "name": "Individual or Organization Name",
-},
-{
-   ...
-}
+}, ...
 ```
 
-For the list of authenticated email addresses:
+The file list-accounts-email.json has accounts with authenticated email address. It follows this schema.
+
 ```json
 {
   "address": "0x.....",
@@ -50,11 +59,12 @@ For the list of authenticated email addresses:
 }, ...
 ```
 
-For the list of authenticated Twitter accounts:
+The file list-accounts-twitter.json has accounts with authenticated Twitter handle. It follows this schema.
+
 ```json
 {
   "address": "0x.....",
-  "email": "https://twitter.com/foobar",
+  "twitter": "https://twitter.com/foobar",
 }, ...
 ```
 
